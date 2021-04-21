@@ -17,11 +17,19 @@
 				<div class="controls">
 					<input type="text" class="input-xlarge" name="title" required>
 				</div>
-
+				
 				<label class="control-label" for="date01">Category Name</label>
+				
 				<div class="controls">
-					<input type="text" class="input-xlarge" name="category_name" required>
+					<!-- <input type="text" class="input-xlarge" name="category_name" required> -->
+					<select required="">
+						<option value="">Select Category</option>
+						@foreach($all_category as $category)
+						<option value="{{$category->category_name}}" class="input-xlarge" name="category_name">{{$category->category_name}}</option>
+						@endforeach
+					</select>
 				</div>
+				
 
 				<label class="control-label" for="date01">Description</label>
 				<div class="controls">

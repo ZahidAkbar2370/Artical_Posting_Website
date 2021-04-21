@@ -22,15 +22,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="slider1.jpg" alt="Los Angeles" style="width:100%;height:400px">
+        <img src="banner.jpg" alt="Los Angeles" style="width:100%;height:400px">
       </div>
 
       <div class="item">
-        <img src="slider2.jpg" alt="Chicago" style="width:100%;height:400px">
+        <img src="banner.jpg" alt="Chicago" style="width:100%;height:400px">
       </div>
     
       <div class="item">
-        <img src="slider3.jpg" alt="New york" style="width:100%;height:400px">
+        <img src="banner.jpg" alt="New york" style="width:100%;height:400px">
       </div>
     </div>
 
@@ -57,33 +57,21 @@
     
     <div class="container">
      <div class="row">
+      @foreach($articals as $artical)
           <div class="col-md-4">
-             <img src="" width="300" height="300">
+             <img src="{{$artical->image}}" width="300" height="300">
 
-             <h4>kjdflkjsd lkdjasfjsdaklklasdjf ldjfsksdafj</h4>
+             <h4>{{$artical->title}}</h4>
 
-             <p style="margin-right: 50px">dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf</p>
+             <p style="margin-right: 50px">{{$artical->description}}</p>
 
-          </div>
-           <div class="col-md-4">
-             <img src="" width="300" height="300">
-
-             <h4>kjdflkjsd lkdjasfjsdaklklasdjf ldjfsksdafj</h4>
-
-             <p style="margin-right: 50px">dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf</p>
+             <p style="margin-right: 50px">{{$artical->post_date}}</p>
+             <p style="margin-right: 50px">{{$artical->post_time}}</p>
 
           </div>
-           <div class="col-md-4">
-             <img src="" width="300" height="300">
-             <h4>kjdflkjsd lkdjasfjsdaklklasdjf ldjfsksdafj</h4>
-
-             <p style="margin-right: 50px">dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf dfhjkdshf sdkjfhsdjkfhsdk fhskjf hksjdhfskjfhkjsadhfksj hfsjkadh fkasj fhksjfhaskdfh sjkdfhskdjh fkjsdhf kjsdh fjksd hfkjshfjksdhfjsdh fksdh fkjsdhfkjsdhfkjsdhfkjsdhf</p>
-             
-          </div>
-      </div>
-
-
-    </div>
+          @endforeach
+     </div>
+   </div>
 
 
 </body>

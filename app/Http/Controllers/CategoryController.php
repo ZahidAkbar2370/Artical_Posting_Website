@@ -63,7 +63,9 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $all_category=Category::all();
+
+        return view('admin/category/edit_category')->with('all_category',$all_category);
     }
 
     /**
@@ -75,7 +77,23 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $update = Category::find($id);
+
+        $update->category_name = $request->category_name;
+
+        if($request->status == "")
+        {
+            $update->status = "0";
+        }
+        else
+        {
+            $update->status = $request->status;
+        }
+        
+
+        $update->Update();
+
+        return redirect('view-category');
     }
 
     /**

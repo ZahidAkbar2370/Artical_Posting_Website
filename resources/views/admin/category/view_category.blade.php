@@ -27,9 +27,13 @@
 					<tr>
 						<td><?php echo $category->id; ?></td>
 						<td><?php echo $category->category_name; ?></td>
-						<td><?php echo $category->status; ?></td>
+						@if($category->status == "on")
+							<td>Active</td>
+						@else
+							<td>Unactive</td>
+						@endif
 						<td>
-							<a class="btn btn-info" href="edit/{{$category->id}}">
+							<a class="btn btn-info" href="edit-category/{{$category->id}}">
 							<i class="halflings-icon white edit"></i> 
 							</a>
 							<a class="btn btn-danger" href="delete-category/{{$category->id}}">

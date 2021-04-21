@@ -75,7 +75,7 @@
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="/" class="active"><i class="fa"></i> Home</a></li>
+                                <li><a href="index" class="active"><i class="fa"></i> Home</a></li>
                                 <li><a href="video"><i class="fa"></i> Videos</a></li>
                                 <li><a href="newsletter"><i class="fa"></i> Newsletter</a></li>
                                 <li><a href="create-message"><i class="fa "></i>Contact Us</a></li>

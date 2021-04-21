@@ -29,12 +29,15 @@ Route::get('view-category',"CategoryController@index");
 Route::get('create-category',"CategoryController@create");
 Route::post('save-category',"CategoryController@store");
 Route::get('delete-category/{id}',"CategoryController@destroy");
-
+Route::get('edit-category/{id}',"CategoryController@edit");
+Route::post('update-category/{id}',"CategoryController@update");
 //Artical Routes
 Route::get('view-artical',"ArticalController@index");
 Route::get('create-artical',"ArticalController@create");
 Route::post('save-artical',"ArticalController@store");
 Route::get('delete-artical/{id}',"ArticalController@destroy");
+Route::get('edit-artical/{id}',"ArticalController@edit");
+Route::post('update-artical/{id}',"ArticalController@update");
 
 //Newsletter Routes
 Route::get('view-newsletter',"NewsletterController@index");
@@ -50,22 +53,12 @@ Route::get('delete-message/{id}',"MessageController@destroy");
 
 			//User Panel
 
-
-//Contact us or Message
-Route::get('create-message',"MessageController@create");
-Route::post('send-message',"MessageController@store");
-
-//Newsletter
-Route::get('/newsletter', function () {
-    return view('user/newsletter');
-});
-
 //Home Page for user
 Route::get('/', function () {
     return view('user/user_view');
 });
-
-//Videos
-Route::get('/video', function () {
-    return view('user/video');
-});
+Route::get('/video',"UserController@video");
+Route::get('/index',"UserController@artical");
+//Contact us or Message
+Route::get('create-message',"MessageController@create");
+Route::post('send-message',"MessageController@store");

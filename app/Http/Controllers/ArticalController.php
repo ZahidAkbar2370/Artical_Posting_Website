@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Artical;
+use App\Models\Category;
 class ArticalController extends Controller
 {
     /**
@@ -25,7 +26,9 @@ class ArticalController extends Controller
      */
     public function create()
     {
-        return view('admin/artical/add_artical');
+         $all_category=Category::all();
+
+        return view('admin/artical/add_artical')->with('all_category',$all_category);
     }
 
     /**
@@ -69,7 +72,9 @@ class ArticalController extends Controller
      */
     public function edit($id)
     {
-        //
+         $articals=Artical::all();
+
+        return view('admin/artical/edit_artical')->with('articals',$articals);
     }
 
     /**
@@ -81,7 +86,17 @@ class ArticalController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $update = Artical::find($id);
+
+       $update->title = $request->title;
+       $update->category = $request->category_name;
+       $update->description = $request->description;
+       $update->image = $request->image;
+       $update->video_link = $request->video_link;
+
+       $update->update();
+
+       return redirect('view-artical');
     }
 
     /**
